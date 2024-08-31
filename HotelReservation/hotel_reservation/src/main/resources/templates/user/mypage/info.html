@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>내 정보</title>
+    <script src="../../../static/js/user/info.js" defer></script>
+</head>
+<body>
+    <h1>I'm me.</h1>
+    <div>ID: <span th:text="${#authentication.principal.userVO.id}"></span></div>
+    <div>nickname: <span th:text="${#authentication.principal.userVO.nickname}"></span></div>
+    <div>E-mail: <span th:text="${#authentication.principal.userVO.email}"></span></div>
+    <div>tel: <span th:text="${#authentication.principal.userVO.tel}"></span></div>
+    <div>role: <span th:text="${#authentication.principal.userVO.role}"></span></div>
+
+
+</body>
+</html>

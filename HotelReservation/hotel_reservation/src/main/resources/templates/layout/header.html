@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    <link rel="stylesheet" href="../../static/css/header/header.css" th:href="@{/css/header/header.css}">
+</head>
+<body>
+    <header th:fragment="header">
+        <a class="logo" href="/"><img src="../../static/image/layout/header/logo.jpg" alt="" th:src="@{/image/layout/header/logo.jpg}"></a>
+        <nav>
+            
+        </nav>
+        <a sec:authorize='authenticated and hasRole("SELLER")' th:href="@{/board}"><img src="../../static/image/layout/header/icons8-board-50.png" alt="" th:src="@{/image/layout/header/icons8-board-50.png}"></a>
+        <a class="global" href="#"><img src="../../static/image/layout/header/icons8-earth-50.png" alt="" th:src="@{/image/layout/header/icons8-earth-50.png}"></a>
+        <a sec:authorize='not authenticated' class="user" href="/user/login"><img src="../../static/image/layout/header/icons8-user-50.png" alt="" th:src="@{/image/layout/header/icons8-user-50.png}"></a>
+        <a sec:authorize='authenticated' class="user" href="/user/mypage/info"><img src="../../static/image/layout/header/icons8-user-50.png" alt="" th:src="@{/image/layout/header/icons8-user-50.png}"></a>
+
+    </header>
+</body>
+</html>

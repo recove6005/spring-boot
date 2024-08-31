@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    width: 900px;
+    margin: 100px auto 20px auto;
+    text-align: center;
+    font-size: 50px;
+    color: dimgrey;
+}
+
+.wrap {
+    width: min-content;
+    border: 5px solid dimgrey;
+    margin: 0 auto 100px auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:first-child {
+    background-color: lightgrey;
+    border-bottom: 3px solid dimgrey;
+}
+
+ul .p-item {
+    border-bottom: 1px solid lightgrey;
+    font-size: 30px;
+    font-weight: bold;
+    color: dimgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul .onerank {
+    background-color: gold;
+    font-size: 30px;
+    font-weight: bold;
+    color: indianred;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ul .p-item .rank {
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+ul .p-item .name {
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+ul .p-item .score {
+    width: 300px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.goback-btn {
+    color: dimgrey;
+    font-size: 30px;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+}
+
+.goback-btn:hover {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.goback-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    transition-duration: 0.5s;
+}
+
+.goback-btn:hover img {
+    width: 32px;
+    height: 32px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Room 세부 정보</title>
+</head>
+<body>
+<div class="detail-info-container">
+    <div class="info-top">
+        <div class="title">room info title</div>
+        <div class="host-info"><a href="#">host info([[${/RoomDTO.roomVO.userId}}]])</a></div>
+        <div class="rate-info"><a href=""><img src="../../static/image/icons8-star-48.png" alt="" th:src="@{/image/icons8-star-48.png}"><span>3.5</span></a></div>
+        <div class="save-info"><a href=""><img src="../../static/image/icons8-heart-50.png" alt="" th:src="@{/image/icons8-heart-50.png}"><span>저장</span></a></div>
+    </div>
+    <div class="info-main">
+        <div class="details">
+            <div class="photo-box" th:each="roomImageVO: ${roomDTO.roomImagesVO}">
+                <img th:src="|@{/rooms/image/${roomImageVO.roomImage}}|" alt="room-photo">
+<!--                <img src="../../static/image/room-sample.jpg" alt="" th:src="@{/image/room-sample.jpg}">-->
+            </div>
+            <div class="details-box">
+            </div>
+        </div>
+
+        <form th:action="@{/rooms/reservation}">
+            <div class="pay-box">
+                <div>
+                    <span>&#8361;</span><span class="per-price-input">[[${/RoomDTO.roomVO.price}}]]</span><span>/박</span>
+                    <select name="" id="">
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4">4명</option>
+                        <option value="5">5명</option>
+                        <option value="6">6명</option>
+                        <option value="7">7명</option>
+                        <option value="8">8명</option>
+                    </select>
+                    <label for="perday"><input class="per-day-input" id="perday" type="text"> 박</label>
+                </div>
+                <div>
+                    <span>&#8361;</span><span class="per-price-output" th:text="${RoomDTO.roomVO.userId} + 님">[[${/RoomDTO.roomVO.price}}]]</span><span>x</span><span class="per-day-output"> 5 </span><span>박</span>
+                    <span>&#8361;</span><span class="total-price">100,000</span>
+                </div>
+            </div>
+            <button type="submit">예약하기</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

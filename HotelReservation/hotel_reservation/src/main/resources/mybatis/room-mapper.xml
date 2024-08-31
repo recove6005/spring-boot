@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotelreservation.mapper.UserMapper">
+    <resultMap id="get_all_rooms_info" type="RoomDTO">
+        <id column="no" property="roomNo"/>
+
+        <association property="roomVO" javaType="com.example.hotelreservation.domains.vo.RoomVO">
+            <result column="title" property="title"/>
+            <result column="price" property="price"/>
+        </association>
+
+        <collection property="ratingVO" ofType="com.example.hotelreservation.domains.vo.RatingVO" javaType="list">
+            <result column="score" property="score"/>
+        </collection>
+
+        <collection property="roomImagesVO" ofType="com.example.hotelreservation.domains.vo.RoomImagesVO" javaType="list">
+            <result property="roomImage" column="image"/>
+        </collection>
+    </resultMap>
+
+<!--    <select id="get_rating_by_roomId" resultType="RatingVO">-->
+<!--        SELECT * FROM `rateing` WHERE `room_no` = #{roomNo}-->
+<!--    </select>-->
+<!--    <select id="get_images_by_roomId" resultType="RoomImagesVO">-->
+<!--        SELECT * FROM `room_images` WHERE `room_no` = #{roomNo}-->
+<!--    </select>-->
+
+    <select id="get_all_rooms" parameterType="string">
+        SELECT * FROM `room` ROOM
+        LEFT JOIN `room_images` IMAGES
+        ON ROOM.`no` = IMAGES.`room_no`
+        LEFT OUTER JOIN `rating` RATE
+        ON ROOM.`no` = RATE.`room_no`
+        WHERE ROOM.`state` = 'POST'
+        <if test="roomNo != null">
+            AND
+            ROOM.no = #{roomNo}
+        </if>
+    </select>
+
+</mapper>

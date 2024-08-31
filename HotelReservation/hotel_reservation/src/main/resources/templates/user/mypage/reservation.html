@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Reservation : 예약 정보</title>
+</head>
+<body>
+    <div th:text="${reservationDTOS}"></div>
+
+<th:block th:each="reservationDTO : ${reservationDTOS}">
+        <div style="border: 1px solid black; margin: 10px 0; background-color: bisque">
+            <b>no:</b><span>[[${reservationDTO.reservationVO.roomNo}}]]</span>
+            <b>price:</b><span>[[${reservationDTO.reservationVO.price}}]]</span>
+            ...
+        </div>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hotelreservation.mapper.UserMapper">
+    <select id="get_user_by_id" parameterType="string" resultType="UserVO">
+        SELECT * FROM `user` WHERE `id` = #{id};
+    </select>
+    <select id="get_user_by_email" parameterType="string" resultType="UserVO">
+        SELECT * FROM `user` WHERE `email` = #{email};
+    </select>
+    <insert id="join_user" parameterType="UserVO">
+        INSERT INTO `user` VALUES (#{id}, #{pw}, #{nickname}, #{tel}, #{email}, #{birth}, #{role});
+    </insert>
+
+</mapper>

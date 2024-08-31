@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../../static/css/user/join.css" th:href="@{/css/user/join.css}">
+    <script src="../../static/js/user/join.js" th:src="@{/js/user/join.js}"></script>
+</head>
+<body>
+<div class="header">
+    <h1>회원가입</h1>
+    <p>회원정보를 입력해주세요. 모두 입력하셔야 가입이 가능합니다.</p>
+</div>
+<form class="reg_form" th:action="@{/user/join}" method="post">
+    <div class="contents">
+        <ul>
+            <li><div><input type="text" placeholder="ID를 만들어주세요." class="id_input" name="id"></div></li>
+            <li><div><input type="password" placeholder="비밀번호 입력(8-15자, 영문자/특수문자 입력)" class="password_input" name="pw"></div></li>
+            <li><div><input type="password" placeholder="위의 비밀번호를 다시 입력해 주세요." class="password_check_input"></div></li>
+            <li><div><input type="text" placeholder="닉네임" class="name_input" name="nickname"></div></li>
+            <li>
+                <div class="tel_container">
+<!--                    js-->
+                    <input type="text" class="telInput" name="tel" placeholder="휴대폰 번호">
+<!--                    <select name="" class="tel_head_input">-->
+<!--                        <option value="010">010</option>-->
+<!--                        <option value="011">011</option>-->
+<!--                        <option value="016">016</option>-->
+<!--                        <option value="017">017</option>-->
+<!--                        <option value="018">018</option>-->
+<!--                        <option value="019">019</option>-->
+<!--                    </select>-->
+<!--                    <input type="text" class="tel_middle_input" placeholder="휴대번호 입력">-->
+<!--                    <p>-</p>-->
+<!--                    <input type="text" class="tel_end_input">-->
+                    <input type="text" placeholder="인증번호 입력" class="codeInput" name="code"/>
+                    <a href="#">인증번호 받기</a>
+                    <a href="#">확인</a>
+                </div>
+            </li>
+            <li>
+                <div class="email_container">
+                    <input type="text" name="email" placeholder="이메일">
+<!--                    <input type="text" class="post_email_input">-->
+<!--                    <input type="text" class="next_email_input">-->
+<!--                    <select name="" class="email_selector">-->
+<!--                        <option value="직접입력">직접입력</option>-->
+<!--                        <option value="naver">naver.com</option>-->
+<!--                        <option value="doum">daum.net</option>-->
+<!--                        <option value="hatmail">hatmail.com</option>-->
+<!--                        <option value="nate">nate.com</option>-->
+<!--                        <option value="yahoo">yahoo.co.kr</option>-->
+<!--                        <option value="paran">paran.com</option>-->
+<!--                        <option value="empas">empas.com</option>-->
+<!--                        <option value="dreamwiz">dreamwiz.com</option>-->
+<!--                        <option value="freechal">freechal.com</option>-->
+<!--                        <option value="lycos">lycos.co.kr</option>-->
+<!--                        <option value="korea">korea.com</option>-->
+<!--                        <option value="gmail">gmail.com</option>-->
+<!--                        <option value="hanmir">hanmir.com</option>-->
+<!--                    </select>-->
+                </div>
+            </li>
+            <li>
+                <label><input name="role" type="radio" value="USER" checked> 일반회원</label>
+                <label><input name="role" type="radio" value="SELLER"> 판매회원</label>
+            </li>
+            <li>
+                <input type="text" placeholder="생년월일(option)" class="id_input" name="birth">
+            </li>
+        </ul>
+    </div>
+
+    <div class="button_container">
+        <input class="reset_btn" type="submit" value="취소">
+        <input class="submit_btn" type="submit" value="확인">
+    </div>
+</form>
+</body>
+</html>

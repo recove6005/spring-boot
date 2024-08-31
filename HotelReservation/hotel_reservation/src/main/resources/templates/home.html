@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Main</title>
+    <link rel="stylesheet" href="../../static/css/room/main.css" th:href="@{/css/room/main.css}">
+    <link rel="stylesheet" href="../../static/css/header/header.css" th:href="@{/css/header/header.css}">
+</head>
+<body>
+<header th:replace="layout/header :: header"></header>
+<main>
+    <section class="room_item_filter">
+        <label for="min-price">min</label>
+        <input type="text" id="min-price">
+        <span>~</span>
+        <label for="max-price">max</label>
+        <input type="text" id="max-price">
+
+        <input type="range" min="0" max="1000000">
+        <select name="price-range" id="">
+            <option value="">전체</option>
+            <option value="">가격순</option>
+        </select>
+    </section>
+
+    <section class="rooms">
+        <form action="/rooms/main" method="get" class="room_item_container">
+            <div class="room_item_photo">
+                <a href=""><img src="../../static/image/rooms/room-sample.jpg" alt="" th:src="@{/image/rooms/room-sample.jpg}"></a>
+            </div>
+            <div class="room_item_header">
+                <div class="room_item_title">room title</div>
+                <a class="room_item_heart" href=""><img src="../../static/image/layout/header/icons8-heart-50.png" alt="" th:src="@{/image/layout/header/icons8-heart-50.png}"></a>
+                <a class="room_item_rating" href=""><img src="../../static/image/layout/header/icons8-star-48.png" alt="" th:src="@{/image/layout/header/icons8-star-48.png}"><span>3.5</span></a>
+            </div>
+            <div class="room_item_price">
+                <span>&#8361;</span>
+                <span>100,000</span>
+                <span>/박</span>
+            </div>
+        </form>
+    </section>
+</main>
+
+
+</body>
+</html>

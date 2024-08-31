@@ -1,0 +1,38 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hotelreservation.mapper.ReserveMapper">
+    <insert id="reserve_room" parameterType="ReservationVO">
+        INSERT INTO `reservation` VALUES(NULL, #{userId}, #{roomNo}, #{reservationDate}, #{price}, DEFAULT)
+    </insert>
+
+    <select id="get_reserve_info_by_user" parameterType="UserVO" resultMap="get_reserve_info_by_user_map">
+        SELECT RE.*, RO.title, RO.text, RO.state, RI.image
+        FROM reservation RE
+            INNER JOIN room RO
+            ON RE.`room_no` = RO.`no`
+            INNER JOIN room_images RI
+            ON RO.`no` = RI.`room_no`
+        WHERE RE.`user_id` = #{id};
+    </select>
+
+    <resultMap id="get_reserve_info_by_user_map" type="ReservationDTO">
+        <id property="id" column="id"/>
+        <association property="reservationVO" javaType="ReservationVO">
+            <result property="roomNo" column="room_no"/>
+            <result property="reserveDate" column="reserve_date"/>
+            <result property="price" column="price"/>
+            <result property="state" column="RE.state"/>
+        </association>
+        <association property="roomVO" javaType="RoomVO">
+            <id property="no" column="no"/>
+            <result property="title" column="title"/>
+            <result property="price" column="price"/>
+            <result property="text" column="text"/>
+            <result property="state" column="RO.state"/>
+        </association>
+        <collection property="roomImagesVOS" javaType="list" ofType="RoomImagesVO">
+            <result property="roomImage" column="image"/>
+        </collection>
+    </resultMap>
+</mapper>

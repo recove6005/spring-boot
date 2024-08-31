@@ -1,0 +1,19 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hotelreservation.mapper.BoardMapper">
+    <!-- 방 게시-->
+    <insert id="post_board" parameterType="BoardVO">
+        INSERT INTO `room` VALUES(NULL, #{userId}, #{title}, #{price}, #{text}, DEFAULT)
+    </insert>
+    <!-- insert한 방의 이미지 저장 -->
+    <insert id="post_images" parameterType="RoomImagesVO">
+        <selectKey keyProperty="room_no" order="BEFORE" resultType="int">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        INSERT INTO `room_images` VALUES
+        <foreach collection="list" item="images" separator=",">
+            (NULL, #{room_no}, #{roomImages})
+        </foreach>
+    </insert>
+</mapper>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+</head>
+<body>
+<section>
+    <div class="logo"><img src="" alt=""></div>
+    <div class="input_container">
+        <form th:action="@{/user/login}" method="post" class="login-form">
+<!--            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}}">-->
+            <div><input type="text" class="id" placeholder="ID" name="username"></div>
+            <div><input type="text" class="pw" placeholder="PASSWORD" name="password"></div>
+            <label for="save-id">아이디 저장</label><input id="save-id" type="checkbox">
+            <label for="auto-login">자동 로그인<input id="auto-login" type="checkbox" name="remember-me"></label>
+            <button>Login</button>
+        </form>
+        <a href="/user/info">아이디 / 비밀번호 찾기</a>
+    </div>
+</section>
+</body>
+</html>

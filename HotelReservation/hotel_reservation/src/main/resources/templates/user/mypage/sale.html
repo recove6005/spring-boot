@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org/"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>예약 요청</title>
+</head>
+<body>
+<th:block th:each="reservationVO : ${reservationVOS}">
+    <div>
+        <b>no:</b><span>[[${reservationVO.roomNo}}]]</span>
+        <b>price:</b><span>[[${reservationVO.price}}]]</span>
+    </div>
+    <input type="button" value="수락">
+    <input type="button" value="취소">
+</th:block>
+</body>
+</html>
