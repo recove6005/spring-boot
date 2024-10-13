@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'paybooc-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  *{margin: 0; padding: 0; }
+  ul,li{list-style: none;}
+  input{border:none;}
+  a {
+    text-decoration: none;
+    color:#000503;
+    font-family: 'paybooc-Bold';
+    font-style: bold;
+  }
+  
+  body {background-color: #f6f6f6;}
+  .wrap {width: 540px; margin: 0 auto; height:auto; overflow:hidden; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+  header {width: 540px; height:88px; background-color: #fff;}
+  header > .navbar {height:44px;}
+  .container{padding:0;}
+  .container > .navbar {
+    width:540px; height:44px;
+  }
+  .col-xs-6 > .btn > a > img {
+    width:100px; height:22px;
+    margin-top:-23px;
+  }
+  .navbar > .container > .col-xs-3 {
+    display: flex;
+    margin-top:-18px;
+  }
+  .navbar > .container > .col-xs-3 > .icon > a {
+    border:none;
+    text-decoration: none;
+  }
+  .navbar > .container > .col-xs-3  > .icon > .map1 {
+    margin-top:3px; margin-right:7.5px;
+  }
+  .navbar > .container > .col-xs-3  > .icon > .map1 > img {
+    width:16px; height:22px;
+  }
+  
+  .navbar > .container > .col-xs-3  > .icon > .navbar-toggler {
+  padding:0;
+  }
+  
+  .navbar > .container > .col-xs-3  > .icon > .navbar-toggler > img {
+  width:28px; height:20px; 
+  }
+  .navbar > .container > .btn {
+    display: flex;
+    margin-top:-5px;
+    margin-left:-15px;
+  }
+  .navbar > .container > .btn > img {
+    width:24px; height:24px;
+  }
+  .navbar > .container > .btn > p {
+    font-family: 'paybooc-Bold';
+    margin-left:4px;
+    margin-top:2px;
+    font-size: 14px;
+  }
+  .navbar > .container > .col-xs-3 > .icon {
+    margin-left:15px;
+  }
+  
+  .nav > .nav-item > .nav-link {border:none;}
+  
+  .offcanvas.offcanvas-start{
+  width:300px;
+  height:100%;
+  padding:0;
+  }
+  .offcanvas > .offcanvas-header {
+  width:367px;
+  height:74px;}
+  .offcanvas > .offcanvas-header > span {
+  margin-top:-50px;
+  }
+  .offcanvas-header > .m-auto > .offcanvas-title {
+    color:#000503;
+    text-align:center;
+    font-family: 'paybooc-Bold';
+    font-style: bold;
+  }
+  .offcanvas > .offcanvas-body > div > .nav1 > .nav-item{
+    color:#000503;
+    font-family: 'paybooc-Bold';
+    font-style: bold;
+    font-size:16px;
+    margin:0 auto;
+    padding-top:25px;
+  }
+  .offcanvas > .offcanvas-body > div > .nav1 > .nav-item > .nav-link{
+  border:none;
+  }
+  .offcanvas > .offcanvas-body > div > .nav1{
+  display:block;
+  }
+  
+  .nav{
+  background-color: #fff;
+  display: flex;
+  }
+  
+  .nav > .nav-item {
+  color:#000503;
+    font-family: 'paybooc-Bold';
+    font-size:16px;
+  }
+  
+  .nav > .nav-item > .nav-link{
+    color:#000503;
+    text-decoration: none;
+    font-family: 'paybooc-Bold';
+    font-size:16px;}
+  
+    .nav > .nav-item > .nav-link:active, .nav > .nav-item > .nav-link:hover {
+    color: #ff3822;
+    border-color: #ff3822;
+    border-bottom: 4px solid #ff3822;
+    height: 100%;
+  }
+  /* Body영역 */
+  .Box1{
+    background-color: #fcfcfc;
+    width:540px;
+    overflow: hidden;
+    padding:60px;
+  }
+  
+  .Box1 > hr{
+    width:300px;
+    border: 2px solid #000503;
+    opacity: none;
+    margin:0 auto;
+  }
+  
+  .Box1 > .Reform_pwd {
+    margin: 25px auto;
+    font-family: 'paybooc-Bold';
+    font-size: 33.5px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000503;
+  }
+  
+  .Box1 > form > p > label {
+  font-family: 'paybooc-Bold';
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000503;
+  }
+
+  .Box1 > .Reform_pwd_com {
+    font-family: 'paybooc-Bold';
+    font-size: 22px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000503;
+  }
+  
+  .Box1 > form > p
+    {
+        margin: 20px auto;
+    }
+    .Box1 > .Reform_pwd_com > h1 {
+            font-family: 'paybooc-Bold';
+            font-size:22px;
+            margin-top:50px;
+    }
+    .Box1 > .Reform_pwd_com > p{
+    font-size: 22px;
+    font-family: 'paybooc-Bold';
+    color: #000503;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  .Box1 > form > .final_btn {
+    width:300px;
+    background:#000503;
+    border-radius: 5px;
+    margin-top: 50px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .Box1 > form > .final_btn > a > .btn {
+    font-family: 'paybooc-Bold';
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+    margin:auto 5px;
+  padding:10px;
+  }
+  
+  /* footer영역 */
+  footer {
+    width: 540px;
+    height: 195px;
+    background-color: #e2e2e2;
+    padding:6.125px;
+  }
+  footer > section > a {
+      text-decoration: none;
+  }
+  
+  footer > section > a > .e-mail {
+      margin-left:175px;
+      margin-top:12.5px;
+      font-family: 'paybooc';
+      font-size: 11px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      color: #000503;
+  }
+  footer > section > hr  {
+    width: 480px;
+    height: 0.5px;
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-left:22.5px;
+    background-color: #000503;
+    border:none;
+  }
+  footer > section > .copyright {
+    font-size:11px;
+    text-align:center;
+    margin-left:-5px;
+  }
+  footer > section > .address {
+    font-size:11px;
+    margin-top:10px;
+    text-align:center;
+    margin-left:-5px;
+  }
+  footer > section > .Rules {
+    font-size:11px;
+    margin-top:10px;
+    text-align:center;
+    margin-left:-5px;
+  }
+  

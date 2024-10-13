@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.book.mapper.book.LoanMapper">
+    <select id="get_loan_by_no" parameterType="int" resultMap="LoanVO">
+        SELECT * FROM `loan` WHERE `no` = #{no}
+    </select>
+
+    <resultMap id="get_loan_map" type="LoanVO">
+        <id property="no" column="no" />
+        <result property="userId" column="user_id"/>
+        <result property="bookNo" column="book_no"/>
+        <result property="loanDate" column="loan_date"/>
+        <result property="returnDate" column="return_date"/>
+    </resultMap>
+    <select id="get_loan_by_user" resultMap="get_loan_map">
+        SELECT * FROM `loan` WHERE `user_id` = #{userId}
+    </select>
+    <select id="get_loan_by_book" resultMap="get_loan_map">
+        SELECT * FROM `loan` WHERE `book_no` = #{bookNo}
+    </select>
+
+    <insert id="save" parameterType="LoanVO">
+        INSERT INTO `loan` VALUES(NULL, #{userId}, #{boonNo}, #{loanDate}, #{returnDate})
+    </insert>
+
+    <update id="update">
+        UPDATE `loan`
+        SET
+            `user_id` = #{loanVO.userId},
+            `book_no` = #{loanVO.bookNo},
+            `loan_date` = #{loanVO.loanDate},
+            `return_date` = #{loanVO.returnDate}
+        WHERE `no` = #{no}
+    </update>
+
+    <delete id="remove">
+        DELETE FROM `loan` WHERE `no` = #{no}
+    </delete>
+</mapper>

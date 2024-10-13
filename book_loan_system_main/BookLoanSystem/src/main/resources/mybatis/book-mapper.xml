@@ -1,0 +1,79 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.book.mapper.book.BookMapper">
+    <select id="get_book_by_no" parameterType="int">
+        SELECT * FROM `book` WHERE `no` = #{no}
+    </select>
+
+    <resultMap id="findAllBySearch_map" type="BookVO">
+        <result property="no" column="no"/>
+        <result property="title" column="title"/>
+        <result property="author" column="author"/>
+    </resultMap>
+    <select id="findAllBySearch" resultMap="findAllBySearch_map">
+        SELECT * FROM `book`
+        WHERE
+        <choose>
+            <when test="field == 'title'">
+                `title` LIKE CONCAT('%', #{keyword}, '%')
+            </when>
+            <when test="field == 'author'">
+                `author` LIKE CONCAT('%', #{keyword}, '%')
+            </when>
+        </choose>
+        ORDER BY
+        <choose>
+            <when test="sortBy == 'title'">
+                `title`
+            </when>
+            <when test="sortBy == 'author'">
+                `author`
+            </when>
+            <when test="sortBy == 'publisher'">
+                `publisher`
+            </when>
+        </choose>
+        <if test="order == 'desc'">
+            DESC
+        </if>
+        LIMIT #{maxResult} OFFSET #{offset}
+    </select>
+
+    <select id="findCountBySearch" resultType="int">
+        SELECT COUNT(*) FROM `book`
+        WHERE
+        <choose>
+            <when test="field == 'title'">
+                `title` LIKE CONCAT('%', #{keyword}, '%')
+            </when>
+            <when test="field == 'author'">
+                `author` LIKE CONCAT('%', #{keyword}, '%')
+            </when>
+        </choose>
+    </select>
+
+    <insert id="save" parameterType="BookVO">
+        INSERT INTO `book` VALUES(NULL, #{title}, #{author}, #{publisher}, #{lib}, #{state}, #{target}, #{type}, #{imagePath})
+    </insert>
+
+    <update id="update">
+        UPDATE `book` SET
+            `title` = #{bookVO.title},
+            `author` = #{bookVO.author},
+            `publisher` = #{bookVO.publisher},
+            `lib` = #{bookVO.lib},
+            `target` = #{bookVO.target},
+            `type` = #{bookVO.type},
+            `imagePath` = #{bookVO.imagePath}
+        WHERE `no` = #{no}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM `book` WHERE `no` = #{no}
+    </delete>
+
+    <select id="findByNo" resultType="BookVO">
+        SELECT * from `book` WHERE `no` = #{no}
+    </select>
+</mapper>

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<title>BookRlim_Book</title>
+<link rel="apple-touch-icon" href="" />
+<link rel="stylesheet" href="./assets/css/Book.css">
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+<script type="text/javascript">
+// 주소창 자동 닫힘
+window.addEventListener("load", function(){
+setTimeout(loaded, 100);
+
+}, false);
+
+function loaded(){
+window.scrollTo(0, 1);
+}
+</script>
+
+</head>
+<body>
+    <!-- side banner1 영역 -->
+    <section class="left_banner">
+        <a href="#">
+            <img src="./assets/image/banner4.png" alt="banner4">
+        </a>
+    </section>
+     <!-- side banner2 영역 -->
+    <section class="right_banner1">
+        <a href="#">
+            <img src="./assets/image/banner3.png" alt="banner3">
+        </a>
+    </section>
+    <section class="right_banner2">
+        <a href="#">
+            <img src="./assets/image/banner2.png" alt="banner2">
+        </a>
+    </section>
+        <!-- 상단 네비게이트 바 -->
+        <div class="wrap">
+          <main>
+          <header>
+        <div class="navbar nav-tabs navbar-fixed-top" style="background-color:white; border-bottom:1px solid gray">
+              <div class="container">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                    <img src="./assets/image/user.svg" alt="user"><p>My</p>
+                  </button>
+                  
+                  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                    <div class="offcanvas-header">
+                        <span class="m-auto mt-4"><h5 class="offcanvas-title mt-2" id="staticBackdropLabel">My page</h5></span>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div>
+                        <ul class="nav1 justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="join.html">회원가입</a>
+                              </li>
+                            <li class="nav-item">
+                                <span class="d-flex"><a class="nav-link login" href="Login.html">로그인</a>&nbsp;/&nbsp;<a class="nav-link logout" href="#">로그아웃</a></span>
+                              </li>
+                              <li class="nav-item">
+                                <span class="d-flex"><a class="nav-link findid" href="find_id.html">아이디 찾기</a>&nbsp;/&nbsp;<a class="nav-link findpwd" href="find_pwd.html">비밀번호 찾기</a></span>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link reformpwd" href="./reform_pwd.html">비밀번호 수정하기</a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">대출목록</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">예약목록</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">연체목록</a>
+                            </li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
+                
+  
+                  <!-- 가운데 로고 -->
+                  <div class="col-xs-6" style="background-color:white-space; text-align:center; display:inline-block;">
+                        <button type="button" class="btn btn-default btn-lg">
+                         <a href="./Main.html"><img src="./assets/image/BookRlim logo.svg" alt="logo"></a>
+                        </button>
+                  </div>
+  
+                  <div class="col-xs-3">
+                    <div class="icon">
+                    <a href="./Map.html" class="map1">
+                        <img src="./assets/image/map.svg" alt="map1">
+                    </button>
+                </a>
+                    <a href="/bell" class="navbar-toggler">
+                        <img src="./assets/image/bell.svg" alt="bell" class="bell">
+                        <span class="badge rounded-pill bg-danger svelte-60qcpp" style="display: none;">
+                            <span class="badge-content">0</span>
+                            <span class="visually-hidden">bell items</span>
+                        </span>
+                    </a>
+                </div>
+              </div>
+        </div>
+        </div>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="./Main.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Book.html">BOOK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Culture.html">CULTURE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Notice.html">NOTICE</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">QnA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Map.html">MAP</a>
+            </li>
+        </ul>
+</header>
+
+<!-- map 영역 -->
+<section>
+  <div class="container6">
+          <h2>Book</h2>
+
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    분야선택
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">총 류</a></li>
+              <li><a class="dropdown-item" href="#">철 학</a></li>
+              <li><a class="dropdown-item" href="#">종 교</a></li>
+              <li><a class="dropdown-item" href="#">사회 과학</a></li>
+              <li><a class="dropdown-item" href="#">순수 과학</a></li>
+              <li><a class="dropdown-item" href="#">기술 과학</a></li>
+              <li><a class="dropdown-item" href="#">예 술</a></li>
+              <li><a class="dropdown-item" href="#">언 어</a></li>
+              <li><a class="dropdown-item" href="#Literature">문 학</a></li>
+              <li><a class="dropdown-item" href="#">역 사</a></li>
+            </ul>
+          </div>
+
+          <div class="Book">
+            <ul class="Book-menu" id="">  
+                <li class="Book-category" id="Literature">
+                    <div class="Book-item">
+                        <a href="#">
+                    <div class="Book-image">
+                        <img src="./assets/image/보보경심려1.jfif" alt="보보경심1">
+                    </div>
+                    <div class="Book-title">
+                        <h4>보보경심1</h4>
+                        <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간 21세기 중국 여성의 사랑과 운명을 그리고 있다...</p>
+                        <hr>
+                        <div class="Book-icon">
+                        <img src="./assets/image/map.svg" alt="Book_icon" class="Book_icon_img">
+                        <p>분류:문학</p>
+                        </div>
+                    </div>
+                    </a>
+                    </div>
+                </li>
+                <li class="Book-category" id="Literature">
+                  <div class="Book-item">
+                      <a href="#">
+                  <div class="Book-image">
+                      <img src="./assets/image/보보경심려2.jfif" alt="보보경심2">
+                  </div>
+                  <div class="Book-title">
+                      <h4>보보경심2</h4>
+                      <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간 21세기 중국 여성의 사랑과 운명을 그리고 있다...</p>
+                      <hr>
+                      <div class="Book-icon">
+                      <img src="./assets/image/map.svg" alt="Book_icon" class="Book_icon_img">
+                      <p>분류:문학</p>
+                      </div>
+                  </div>
+                  </a>
+                  </div>
+              </li>
+              <li class="Book-category" id="Literature">
+                <div class="Book-item">
+                    <a href="#">
+                <div class="Book-image">
+                    <img src="./assets/image/보보경심려3.jfif" alt="보보경심3">
+                </div>
+                <div class="Book-title">
+                    <h4>보보경심3</h4>
+                    <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간 21세기 중국 여성의 사랑과 운명을 그리고 있다...</p>
+                    <hr>
+                    <div class="Book-icon">
+                    <img src="./assets/image/map.svg" alt="Book_icon" class="Book_icon_img">
+                    <p>분류:문학</p>
+                    </div>
+                </div>
+                </a>
+                </div>
+            </li>
+            </ul>
+          </div>
+</section>
+
+
+<!-- footer영역 -->
+<footer>
+  <section>
+  <a href="mailto:Gildong2@BookRlim.org"><p class="e-mail">contact | Gildong2@BookRlim.org</p></a>
+  <hr>
+  <p class="copyright">
+      &copy;BookRlim Service. All rights reserved.
+  </p>
+  <p class="address">
+      Address: Ground KR 5th floor, Basement 1,<br>
+      2095 Dalgubeol-daero,Jung-gu, Daegu Metropolitan City
+  </p>
+  <hr>
+  <p class="Rules">
+      Privacy Policy | Terms of Service
+  </p>
+</section>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
+
+
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+
+<link rel="apple-touch-icon" href="" />
+
+<script type="text/javascript">
+
+window.addEventListener("load", function(){
+setTimeout(loaded, 100);
+
+}, false);
+
+function loaded(){
+window.scrollTo(0, 1);
+}
+
+</script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLS</title>
+</head>
+<body>
+<span th:if="${session.userId!=null}" th:text="|${session.userId} 님 환영합니다.|"></span>
+<a href="/user/login" th:if="${session.userId==null}">로그인하러 가기</a><br>
+<a href="/user/logout" th:if="${session.userId!=null}">로그아웃</a>
+
+<select name="field" id="">
+    <option value="title">제목</option>
+    <option value="author">저자</option>
+    <option value="publisher">발행처</option>
+</select>
+<input type="text" name="keyword"><a href="">검색</a>
+</body>
+</html>

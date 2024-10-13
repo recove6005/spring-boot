@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<title>BookRlim_Main</title>
+<link rel="apple-touch-icon" href="" />
+<link rel="stylesheet" href="./assets/css/main.css">
+<script src="./assets/js/main.js" defer></script>
+<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
+<script type="text/javascript">
+// 주소창 자동 닫힘
+window.addEventListener("load", function(){
+setTimeout(loaded, 100);
+
+}, false);
+
+function loaded(){
+window.scrollTo(0, 1);
+}
+</script>
+
+</head>
+<body>
+    <!-- side banner1 영역 -->
+    <section class="left_banner">
+        <a href="#">
+            <img src="./assets/image/banner4.png" alt="banner4">
+        </a>
+    </section>
+     <!-- side banner2 영역 -->
+    <section class="right_banner1">
+        <a href="#">
+            <img src="./assets/image/banner3.png" alt="banner3">
+        </a>
+    </section>
+    <section class="right_banner2">
+        <a href="#">
+            <img src="./assets/image/banner2.png" alt="banner2">
+        </a>
+    </section>
+        <!-- 상단 네비게이트 바 -->
+        <div class="wrap">
+          <main>
+            <header>
+              <div class="navbar nav-tabs navbar-fixed-top" style="background-color:white; border-bottom:1px solid gray">
+                    <div class="container">
+                      <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+                          <img src="./assets/image/user.svg" alt="user"><p>My</p>
+                        </button>
+                        
+                        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+                          <div class="offcanvas-header">
+                              <span class="m-auto mt-4"><h5 class="offcanvas-title mt-2" id="staticBackdropLabel">My page</h5></span>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                          </div>
+                          <div class="offcanvas-body">
+                            <div>
+                              <ul class="nav1 justify-content-center">
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="join.html">회원가입</a>
+                                    </li>
+                                  <li class="nav-item">
+                                      <span class="d-flex"><a class="nav-link login" href="Login.html">로그인</a>&nbsp;/&nbsp;<a class="nav-link logout" href="#">로그아웃</a></span>
+                                    </li>
+                                    <li class="nav-item">
+                                      <span class="d-flex"><a class="nav-link findid" href="find_id.html">아이디 찾기</a>&nbsp;/&nbsp;<a class="nav-link findpwd" href="find_pwd.html">비밀번호 찾기</a></span>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link reformpwd" href="./reform_pwd.html">비밀번호 수정하기</a>
+                                    </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">대출목록</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">예약목록</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="#">연체목록</a>
+                                  </li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                      
+        
+                        <!-- 가운데 로고 -->
+                        <div class="col-xs-6" style="background-color:white-space; text-align:center; display:inline-block;">
+                              <button type="button" class="btn btn-default btn-lg">
+                               <a href="./Main.html"><img src="./assets/image/BookRlim logo.svg" alt="logo"></a>
+                              </button>
+                        </div>
+        
+                        <div class="col-xs-3">
+                          <div class="icon">
+                          <a href="./Map.html" class="map1">
+                              <img src="./assets/image/map.svg" alt="map1">
+                          </button>
+                      </a>
+                          <a href="/bell" class="navbar-toggler">
+                              <img src="./assets/image/bell.svg" alt="bell" class="bell">
+                              <span class="badge rounded-pill bg-danger svelte-60qcpp" style="display: none;">
+                                  <span class="badge-content">0</span>
+                                  <span class="visually-hidden">bell items</span>
+                              </span>
+                          </a>
+                      </div>
+                    </div>
+              </div>
+              </div>
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="./Main.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Book.html">BOOK</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Culture.html">CULTURE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./Notice.html">NOTICE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">QnA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Map.html">MAP</a>
+                  </li>
+              </ul>
+      </header>
+
+<!-- slide영역 -->
+<section>
+  <div class="container1">
+      <div class="slidewrap">
+          <div class="slides">
+              <div class="section1 slide"><img src="./assets/image/slide1.jpg" alt="slide1"></div>
+              <div class="section2 slide"><img src="./assets/image/slide2.jpg" alt="slide2"></div>
+              <div class="section3 slide"><img src="./assets/image/slide3.jpg" alt="slide3"></div>
+              <div class="section4 slide"><img src="./assets/image/slide4.jpg" alt="slide4"></div>
+              <div class="section5 slide"><img src="./assets/image/slide5.jpg" alt="slide5"></div>    
+          </div>
+      </div>
+  </div>
+</section>
+
+  <!-- UI/UX영역 -->
+  <section>
+    <div class="container2">
+        <!-- Search2영역 -->
+        <div class="search2">
+            <input type="text" placeholder="원하는 책의 제목을 입력하세요.">
+            <button><img src="./assets/image/search.svg" alt="search2"></button>
+        </div>
+        <!-- Library_button영역 -->
+        <div class="Library_button">
+            <a href="#"><button><img src="./assets/image/Rent_button.svg" alt="Rent"></button><p>대출</p></a>
+            <a href="#"><button><img src="./assets/image/Return_button.svg" alt="Return"></button><p>반납</p></a>
+            <a href="#"><button><img src="./assets/image/Reservation_button.svg" alt="Reservation"></button><p>예약</p></a>
+            <a href="#"><button><img src="./assets/image/Overdue_button.svg" alt="Overdue"></button><p>연체</p></a>
+            <a href="#"><button><img src="./assets/image/Map_button.svg" alt="Map"></button><p>맵</p></a>
+        </div>
+    </div>
+</section>
+
+<!-- Grid영역 -->
+<section>
+  <div class="container3">
+      <div class="title">
+          <a href="#"><h3># 요즘 핫한 웹 개발 관련 서적</h3></a>
+          <a href="#" class="More">MORE ></a>
+      </div>
+      <ul class="Grid">
+          <ul class="Grid1">
+          <li class="inGrid1">
+              <ul class="innerGrid1">
+                  <li class="Grid_book1"><a href="#"><img src="./assets/image/book1.jpg" alt="book1"></a></li>
+              </ul>
+          </li>
+          <li class="inGrid2">
+              <ul class="innerGrid2">
+                  <li class="Grid_book2"><a href="#"><img src="./assets/image/book2.jpg" alt="book2"></a></li>
+                  <li class="Grid_book3"><a href="#"><img src="./assets/image/book3.jpg" alt="book3"></a></li>
+              </ul>
+          </li>
+          </ul>
+      <ul class="Grid2">
+          <li class="inGrid3">
+              <ul class="innerGrid3">
+                  <li class="Grid_book4"><a href="#"><img src="./assets/image/book4.jpg" alt="book4"></a></li>
+                  <li class="Grid_book5"><a href="#"><img src="./assets/image/book5.jpg" alt="book5"></a></li>
+                  <li class="Grid_book6"><a href="#"><img src="./assets/image/book6.jpg" alt="book6"></a></li>
+              </ul>
+          </li>
+      </ul>
+      </ul>
+  </div>
+</section>
+
+<!-- message영역 -->
+<section>
+  <div class="container4">
+      <div class="message">
+  <p class="h1">내 손안의 편리한 도서관<br>북알림 서비스</p>
+  <p class="h3">Easy Rent. Easy Return. Easy Reservation.<br>We support your easy and convenient reading.<br>This website is only for BookRlim Service.</p>
+</div>
+</div>
+</section>
+
+<!-- swiper1영역 -->
+<section class="swiper1">
+  <h2>Book</h2>
+      <div class="slide_title">
+          <a href="#"><h3># 넷플릭스 드라마 원작 소설!</h3></a>
+          <a href="#" class="More">MORE ></a>
+      </div>
+
+  <div class="container5">
+      <a href="#">
+          <div class="card">
+          <img src="./assets/image/보보경심려1.jfif" alt="">
+          <h4>보보경심 1권</h4>
+          <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간<br>
+              21세기 중국 여성 장효의 사랑과 운명!</p>
+      </div>
+  </a>
+  <a href="#">
+      <div class="card">
+      <img src="./assets/image/보보경심려2.jfif" alt="">
+      <h4>보보경심 2권</h4>
+      <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간<br>
+          21세기 중국 여성 장효의 사랑과 운명!</p>
+  </div>
+</a>
+<a href="#">
+  <div class="card">
+  <img src="./assets/image/보보경심려3.jfif" alt="">
+  <h4>보보경심 3권</h4>
+  <p>18세기 초 청나라 강희제 시대로 시간을 거슬러 간<br>
+      21세기 중국 여성 장효의 사랑과 운명!</p>
+</div>
+</a>
+  </div>
+</section>
+
+<!-- swiper2영역 -->
+<section class="swiper2">
+  <h2>Culture</h2>
+      <div class="slide_title">
+          <a href="#"><h3># 집밥 백종원님과 함께하는 요리강좌</h3></a>
+          <a href="#" class="More">MORE ></a>
+      </div>
+
+  <div class="container5">
+      <a href="#">
+          <div class="card">
+          <img src="./assets/image/thumb1.jpg" alt="">
+          <h4>간짜장 요리</h4>
+          <p>구하기 쉬운 재료와 집에서 하기 쉬운 방식으로
+              <br>볶아내는 간짜장 요리!!</p>
+      </div>
+  </a>
+  <a href="#">
+      <div class="card">
+      <img src="./assets/image/thumb2.jpg" alt="">
+      <h4>갈비찜 요리</h4>
+      <p>시간은 좀 오래 걸리겠지만유! 
+          <br>공들인 보람이 있을거에유</p>
+  </div>
+</a>
+<a href="#">
+  <div class="card">
+  <img src="./assets/image/thumb3.jpg" alt="">
+  <h4>꼬막비빔밥 요리</h4>
+  <p>꼬막이 제철이 아니라도 괜찮아유~<br>
+      꼬막 통조림이 있잖아유~</p>
+</div>
+</a>  
+<a href="#">
+<div class="card">
+<img src="./assets/image/thumb4.jpg" alt="">
+<h4>동파육 요리</h4>
+<p>아..겁먹지 마세유<br>
+ 갈비찜보다는 조금 쉬울거에유</p>
+</div>
+</a>
+<a href="#">
+<div class="card">
+<img src="./assets/image/thumb5.jpg" alt="">
+<h4>부대찌개 요리</h4>
+<p>금요일 저녁에 집에서 부대찌개에<br>
+  소주한잔! 어때유? 맛있겠쥬?</p>
+</div>
+</a>
+  </div>
+</section>
+
+<!-- swiper3영역 -->
+<section class="swiper3">
+  <h2>Notice</h2>
+      <div class="slide_title">
+          <a href="#"><h3>북알림 서비스에서 알려드립니다.</h3></a>
+          <a href="#" class="More">MORE ></a>
+      </div>
+
+  <div class="container5">
+      <a href="#">
+          <div class="card">
+          <img src="./assets/image/slide3.jpg" alt="">
+          <h4>대구 도서관 스탬프 투어!</h4>
+          <p>대구 도서관 스탬프 투어<br>
+             근데 이제 북알림 서비스와 대구광역시가 함께하는</p>
+      </div>
+  </a>
+  <a href="#">
+      <div class="card">
+      <img src="./assets/image/slide1.jpg" alt="">
+      <h4>추석 휴무 공지</h4>
+      <p>23.09.28 ~ 09.29 양일간 서비스 이용에 어려움이<br>
+      있을 수 있으니 주의하시기 바랍니다.</p>
+  </div>
+</a>
+<a href="#">
+  <div class="card">
+  <img src="./assets/image/slide2.jpg" alt="">
+  <h4>북알림 서비스</h4>
+  <p>내 손안의 작은 도서관 북알림 서비스!<br>
+     이용방법에 대해 알려 드리겠습니다.</p>
+</div>
+</a>
+<a href="#">
+  <div class="card">
+  <img src="./assets/image/slide4.jpg" alt="">
+  <h4>AI,웹 개발 서적 대량 입고</h4>
+  <p>미래를 이끌어나갈 청소년들과 학생들을 위해<br>
+      AI,웹 개발에 관련된 서적들을 입고 하였습니다.</p>
+</div>
+</a>
+  </div>
+</section>
+
+<!-- banner1영역 -->
+<section class="banner1">
+  <a href="#">
+          <img src="./assets/image/banner1.png" alt="banner1">
+  </a>
+</section>
+
+
+<!-- map 영역 -->
+<section>
+  <div class="container6">
+          <h2>Map</h2>
+      <div class="region1">
+          <a href="#">
+          <div class="Seoul">Seoul</div>
+          </a>
+          <a href="#">
+          <div class="Daegu">Daegu</div>
+          </a>
+          <a href="#">
+          <div class="Busan">Busan</div>
+          </a>
+          <a href="#">
+              <div class="Sejong">Sejong</div>
+              </a>
+      </div>
+      <div class="region2">
+          <a href="#">
+              <div class="Ulsan">Ulsan</div>
+              </a>
+          <a href="#">
+              <div class="Gwangju">Gwangju</div>
+              </a>
+          <a href="#">
+          <div class="Incheon">Incheon</div>
+          </a>
+          <a href="#">
+          <div class="Daejeon">Daejeon</div>
+          </a>
+      </div>
+          <a href="./Map.html" class="More">MORE ></a>
+
+          <!-- Library_image 영역 -->
+          <section class="Library_1">
+      <a href="#" class="Library1">
+          <div class="Seoul-Metropolitan-Library">
+              <img src="./assets/image/Seoul-Metropolitan-Library.jpg" alt="library" class="library_image">
+              <h3>서울도서관</h3>
+              <img src="./assets/image/map.svg" alt="map_icon" class="map_icon">
+              <p>서울</p>
+          </div>
+      </a>
+      <a href="#" class="Library2">
+          <div class="Jeongdok-Public-Library">
+              <img src="./assets/image/Jeongdok-Public-Library.jpg" alt="library" class="library_image">
+              <h3>정독도서관</h3>
+              <img src="./assets/image/map.svg" alt="map_icon" class="map_icon">
+              <p>서울</p>
+          </div>
+      </a>
+  </section>
+  <section class="Library_2">
+      <a href="#" class="Library3">
+          <div class="Jongno-Public-Library">
+              <img src="./assets/image/Jongno-Public-Library.jpg" alt="library" class="library_image">
+              <h3>종로도서관</h3>
+              <img src="./assets/image/map.svg" alt="map_icon" class="map_icon">
+              <p>서울</p>
+          </div>
+      </a>
+      <a href="#" class="Library4">
+          <div class="Namsan-Public-Library">
+              <img src="./assets/image/Namsan-Public-Library.jpg" alt="library" class="library_image">
+              <h3>남산도서관</h3>
+              <img src="./assets/image/map.svg" alt="map_icon" class="map_icon">
+              <p>서울</p>
+          </div>
+      </a>
+  </div>
+</section>
+</section>
+
+<!-- footer영역 -->
+<footer>
+  <section>
+  <a href="mailto:Gildong2@BookRlim.org"><p class="e-mail">contact | Gildong2@BookRlim.org</p></a>
+  <hr>
+  <p class="copyright">
+      &copy;BookRlim Service. All rights reserved.
+  </p>
+  <p class="address">
+      Address: Ground KR 5th floor, Basement 1,<br>
+      2095 Dalgubeol-daero,Jung-gu, Daegu Metropolitan City
+  </p>
+  <hr>
+  <p class="Rules">
+      Privacy Policy | Terms of Service
+  </p>
+</section>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
+
+
+
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+
+<link rel="apple-touch-icon" href="" />
+
+<script type="text/javascript">
+
+window.addEventListener("load", function(){
+setTimeout(loaded, 100);
+
+}, false);
+
+function loaded(){
+window.scrollTo(0, 1);
+}
+
+</script>

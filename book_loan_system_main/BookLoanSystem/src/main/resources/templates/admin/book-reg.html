@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BLS</title>
+</head>
+<body>
+<h1>도서 등록</h1>
+<form action="" th:object="${form}">
+    <p>도서 명 <input type="text" th:field="*{title}"></p>
+    <p>저자 <input type="text" th:field="*{author}"></p>
+    <p>발행처 <input type="text" th:field="*{publisher}"></p>
+    <p>소장도서관 <input type="text" th:field="*{lib}"></p>
+    <p>이용대상 <input type="text" th:field="*{target}"></p>
+    <p>매체구분 <input type="text" th:field="*{type}"></p>
+    <p>이미지 <input type="file" th:field="*{attachFile}"></p>
+    <button type="submit">등록하기</button>
+    <a href="/admin/home">취소</a>
+</form>
+</body>
+</html>

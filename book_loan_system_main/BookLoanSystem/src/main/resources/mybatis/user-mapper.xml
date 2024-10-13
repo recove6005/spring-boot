@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.book.mapper.user.UserMapper">
+    <insert id="save" parameterType="UserVO">
+        INSERT INTO `user` VALUES(#{id}, #{pw}, #{name}, #{tel}, #{addr})
+    </insert>
+
+    <select id="find_by_id_and_pw"  resultType="UserVO">
+        SELECT * FROM `user` WHERE `id` = #{id} AND `pw` = #{pw}
+    </select>
+
+    <select id="find_by_id"  resultType="UserVO">
+        SELECT * FROM `user` WHERE `id` = #{id}
+    </select>
+
+    <update id="update">
+        UPDATE `user` SET `pw` = #{user.pw}, `name` = #{user.name}, tel = #{user.tel}, addr = #{user.addr} WHERE `id` = #{id};
+    </update>
+
+    <delete id="delete" parameterType="string">
+        DELETE FROM `user` WHERE `id` = #{id}
+    </delete>
+</mapper>

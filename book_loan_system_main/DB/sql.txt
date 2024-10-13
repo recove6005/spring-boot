@@ -1,0 +1,125 @@
+db명 : book-loan-system
+username : root
+password : root
+
+# 회원 테이블
+CREATE TABLE `user` (
+  `id` VARCHAR(15) NOT NULL, 
+  `pw` VARCHAR(60) NOT NULL,
+  `name` VARCHAR(10) NOT NULL,
+  `tel` CHAR(11) NOT NULL,
+  `addr` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`));
+  
+  # 책 테이블
+  CREATE TABLE `book` (
+  `no` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `author` VARCHAR(45) NOT NULL,
+  `publisher` VARCHAR(45) NOT NULL, # 발행처
+  `lib` VARCHAR(45) NOT NULL, # 소장도서관
+  `state` INT NOT NULL, # 대출가능여부 boolean
+  `target` VARCHAR(45) NOT NULL, # 이용대상
+  `type` VARCHAR(45) NOT NULL, # 매체구분
+  PRIMARY KEY (`no`));
+ 
+ # 대출 테이블
+  CREATE TABLE `loan` (
+  `no` INT NOT NULL AUTO_INCREMENT,
+  `user_id` VARCHAR(15) NOT NULL,
+  `book_no` INT NOT NULL,
+  `loan_date` DATETIME NOT NULL,
+  `return_date` DATETIME NOT NULL,
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_user_id_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `user` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_book_no_no`
+    FOREIGN KEY (`book_no`)
+    REFERENCES `book` (`no`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+    
+# 예약 테이블
+ CREATE TABLE `reserve` (
+  `no` INT NOT NULL AUTO_INCREMENT,
+  `book_no` INT NOT NULL,
+  `user_id` VARCHAR(15) NOT NULL,
+  `date` DATETIME NOT NULL DEFAULT now(),
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_book_no`
+    FOREIGN KEY (`book_no`)
+    REFERENCES `book` (`no`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_user_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `user` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+
+# 관리자 테이블
+CREATE TABLE `admin` (
+  `id` VARCHAR(15) NOT NULL,
+  `pw` VARCHAR(60) NOT NULL,
+  `tel` CHAR(11) NOT NULL,
+  PRIMARY KEY (`id`));
+    
+# QnA 테이블
+CREATE TABLE `qna` (
+  `no` INT NOT NULL,
+  `user_id` VARCHAR(15) NOT NULL,
+  `title` VARCHAR(45) NOT NULL,
+  `content` TEXT NULL,
+  `date` DATETIME NOT NULL DEFAULT now(),
+  `resp_no` INT NOT NULL, # 관리자 답변 번호
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_qna_user_id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `user` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+ # 관리자 답변 테이블
+ CREATE TABLE `resp` (
+  `no` INT NOT NULL,
+  `qna_no` INT NULL,
+  `admin_id` VARCHAR(15) NULL,
+  `content` TEXT NULL,
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_resp_qna_no`
+    FOREIGN KEY (`qna_no`)
+    REFERENCES `qna` (`no`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_resp_admin_id`
+    FOREIGN KEY (`admin_id`)
+    REFERENCES `admin` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+
+# 공지사항 테이블
+CREATE TABLE `notice` (
+  `no` INT NOT NULL,
+  `title` VARCHAR(45) NOT NULL,
+  `content` TEXT NULL,
+  `admin_id` VARCHAR(15) NOT NULL,
+  `date` DATETIME NOT NULL DEFAULT now(),
+  `file` BLOB NULL,
+  PRIMARY KEY (`no`),
+  CONSTRAINT `fk_notice_admin_id`
+    FOREIGN KEY (`admin_id`)
+    REFERENCES `admin` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+ALTER TABLE `qna` 
+ADD CONSTRAINT `fk_qna_resp_no`
+  FOREIGN KEY (`resp_no`)
+  REFERENCES `resp` (`no`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
