@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TicketingSystem</title>
+</head>
+<body>
+    <h1>Welcome to Ticketing System</h1>
+    <div th:if="${#authorization.expression('isAuthenticated()')}">
+        <p>Welcome, <span th:text="${#authentication.name}"></span></p>
+        <form th:action="@{/logout}" method="post">
+            <button type="submit">logout</button>
+        </form>
+    </div>
+
+    <div th:unless="${#authorization.expression('isAuthenticated()')}">
+        <a th:href="@{/signup}">Sign up</a> | <a th:href="@{/login}">login</a>
+    </div>
+</body>
+</html>

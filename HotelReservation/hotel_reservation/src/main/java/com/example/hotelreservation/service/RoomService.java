@@ -34,7 +34,4 @@ public class RoomService {
     public RoomDTO find_room_by_roonNo(int roomNo) {
         return roomMapper.get_all_rooms(roomNo).get(0);
     }
-
-
-
 }

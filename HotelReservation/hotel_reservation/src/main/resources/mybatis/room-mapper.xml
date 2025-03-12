@@ -21,12 +21,12 @@
         </collection>
     </resultMap>
 
-<!--    <select id="get_rating_by_roomId" resultType="RatingVO">-->
-<!--        SELECT * FROM `rateing` WHERE `room_no` = #{roomNo}-->
-<!--    </select>-->
-<!--    <select id="get_images_by_roomId" resultType="RoomImagesVO">-->
-<!--        SELECT * FROM `room_images` WHERE `room_no` = #{roomNo}-->
-<!--    </select>-->
+    <!--    <select id="get_rating_by_roomId" resultType="RatingVO">-->
+    <!--        SELECT * FROM `rateing` WHERE `room_no` = #{roomNo}-->
+    <!--    </select>-->
+    <!--    <select id="get_images_by_roomId" resultType="RoomImagesVO">-->
+    <!--        SELECT * FROM `room_images` WHERE `room_no` = #{roomNo}-->
+    <!--    </select>-->
 
     <select id="get_all_rooms" parameterType="string">
         SELECT * FROM `room` ROOM

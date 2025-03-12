@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOOM 세부 정보</title>
+</head>
+<body>
+    <div class="detail-info-container">
+        <div class="info-top">
+            <div class="title">Room Info Title</div>
+            <div class="host-info"><a href="#">Host info([[${/RoomDTO.roomVO.userId}}]])</a></div>
+            <div class="rate-info"><a href="#"><img src="../../static/image/icons8-star-48.png" alt="#" th:src="@{/image/icon8-star-48.png}"></a></div>
+            <div class="save-info"><a href="#"><img src="../../static/image/icons8-heart-50.png" alt="#" th:src="@{/image/icon8-heart-50png}"></a></div>
+        </div>
+    </div>
+    <div class="main-info-container">
+        <div class="room-info-container">
+            <div class="photo-box" th:each="roomImageVO: ${roomDTO.roomImageVO}">
+                <img th:src="|@{/rooms/image/${roomImageVO.roomImage}}|" alt="room-photo">
+            </div>
+            <div class="details-box">
+
+            </div>
+        </div>
+
+        <form th:action="@{/rooms/reservation}">
+            <div class="pay-box">
+                <div>
+                    <span>&#8361</span><span class="price-input"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

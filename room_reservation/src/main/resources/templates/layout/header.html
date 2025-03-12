@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>LOOM</title>
+    <link rel="stylesheet" href="../../static/css/header/header.css" th:href="@{/css/header/header.css}">
+</head>
+<body>
+    <header th:fragment="header">
+        <a class="logo" href="/"><img src="../../static/image/layout/header/logo.jpg" alt="" th:src="@{/image/layout/header/logo.jpg}"></a>
+        <nav>
+            <a sec:authorize='authenticated and hasRole("SELLER")' th:href="@{/board}"><img class="nav-item" src="../../static/image/layout/header/icons8-board-50.png" alt="" th:src="@{/image/layout/header/icons8-board-50.png}"></a>
+            <a class="global" href="#"><img src="../../static/image/layout/header/icons8-earth-50.png" alt="" th:src="@{/image/layout/header/icons8-earth-50.png}"></a>
+            <a sec:authorize='not authenticated' href="/user/login"><img class="nav-item" src="../../static/image/layout/header/icons8-user-50.png" alt="" th:src="@{/image/layout/header/icons8-user-50.png}"></a>
+            <a sec:authorize='authenticated' href="/user/mypage/info"><img class="nav-item" src="../../static/image/layout/header/icons8-user-50.png" alt="" th:src="@{/image/layout/header/icons8-user-50.png}"></a>
+        </nav>
+    </header>
+</body>
+</html>

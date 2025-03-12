@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.recove6005.room_reservation.mapper.RoomMapper">
+    <select id="getAllRooms" parameterType="string">
+        SELECT * FROM `room` ROOM
+        LEFT JOIN `room_images` IMAGES
+        ON ROOM.`no` = IMAGES.`room_no`
+        WHERE ROOM.`state` = 'POST'
+        <if test="roomNo != null">
+            AND
+            ROOM.no = #{roomNo}
+        </if>
+    </select>
+</mapper>

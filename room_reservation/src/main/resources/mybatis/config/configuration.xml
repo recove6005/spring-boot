@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="defaultFetchSize" value="100"/>
+        <setting name="defaultStatementTimeout" value="25"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <!--user-->
+        <typeAlias alias="UserVO" type="com.recove6005.room_reservation.domains.vo.UserVO"/>
+        <!--board-->
+
+        <!--rating-->
+
+        <!--rooms-->
+        <typeAlias alias="RoomImageVO" type="com.recove6005.room_reservation.domains.vo.RoomImageVO"/>
+        <typeAlias alias="RoomVO" type="com.recove6005.room_reservation.domains.vo.RoomVO"/>
+        <typeAlias alias="RoomDTO" type="com.recove6005.room_reservation.domains.dto.RoomDTO"/>
+    </typeAliases>
+</configuration>

@@ -1,7 +1,7 @@
-package com.example.hotelreservation.mapper;
+package com.recove6005.room_reservation.mapper;
 
-import com.example.hotelreservation.domains.dto.RoomDTO;
-import com.example.hotelreservation.domains.vo.RoomVO;
+
+import com.recove6005.room_reservation.domains.dto.RoomDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
